@@ -3,435 +3,450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<title>공항 광고, AI 쟁탈전 — 중국 빅테크 공항 광고전 요약</title>
+<title>ServiceNow Knowledge: 2022 vs 2025-2026 비주얼 리포트</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg: #0E1520;
-    --panel: #141D2B;
-    --panel-2: #182333;
-    --line: #263246;
-    --ink: #EDEFF3;
-    --ink-dim: #9AA7B8;
-    --ink-mute: #6E7B8E;
-    --amber: #FFB627;
-    --teal: #4FD1C5;
-    --coral: #FF6E6C;
-    --amber-bg: rgba(255,182,39,0.08);
-    --teal-bg: rgba(79,209,197,0.08);
-    --coral-bg: rgba(255,110,108,0.08);
+  :root {
+    --bg: #090D14;
+    --card: #121824;
+    --card-border: #1E293B;
+    --text-main: #F8FAFC;
+    --text-sub: #94A3B8;
+    --text-mute: #64748B;
+    --neon-lime: #29F19C;
+    --sn-green: #00EB80;
+    --accent-blue: #38BDF8;
   }
 
-  *{ box-sizing: border-box; }
-
-  html,body{
-    margin:0; padding:0;
-    background: var(--bg);
-    color: var(--ink);
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text-main);
     font-family: 'IBM Plex Sans KR', -apple-system, sans-serif;
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
-  .mono{ font-family:'JetBrains Mono', monospace; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
-  a{ color: var(--amber); text-decoration: none; border-bottom: 1px solid rgba(255,182,39,0.35); }
-  a:hover{ border-bottom-color: var(--amber); }
-
-  .wrap{ max-width: 760px; margin: 0 auto; padding: 0 24px; }
-
-  /* ---------- HERO ---------- */
-  header.hero{
-    background:
-      radial-gradient(circle at 15% 0%, rgba(255,182,39,0.10), transparent 45%),
-      radial-gradient(circle at 90% 20%, rgba(79,209,197,0.08), transparent 40%),
-      var(--bg);
-    border-bottom: 1px solid var(--line);
-    padding: 56px 0 40px;
+  /* HEADER */
+  header {
+    padding: 70px 0 45px;
+    border-bottom: 1px solid var(--card-border);
+    background: radial-gradient(circle at 85% 15%, rgba(41, 241, 156, 0.08), transparent 45%),
+                radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.07), transparent 40%);
   }
-  .eyebrow{
-    display:flex; align-items:center; gap:10px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12px; letter-spacing: 0.06em;
-    color: var(--ink-mute);
-    margin-bottom: 18px;
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--neon-lime);
+    background: rgba(41, 241, 156, 0.1);
+    border: 1px solid rgba(41, 241, 156, 0.25);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
   }
-  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background: var(--amber); flex-shrink:0; }
-  h1.title{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1.18;
-    margin: 0 0 14px;
-    color: #FFFFFF;
-    letter-spacing: -0.01em;
+  h1.title {
+    font-family: 'Sora', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
   }
-  h1.title .accent{ color: var(--amber); }
-  p.subtitle{
+  h1.title span {
+    background: linear-gradient(135deg, #FFFFFF 40%, var(--neon-lime) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p.subtitle {
     font-size: 16.5px;
-    color: var(--ink-dim);
-    max-width: 560px;
-    margin: 0 0 22px;
+    color: var(--text-sub);
+    max-width: 820px;
+    margin: 0;
   }
-  .source-line{
-    font-size: 13px;
-    color: var(--ink-mute);
-    border-top: 1px solid var(--line);
-    padding-top: 16px;
-  }
-  .source-line b{ color: var(--ink-dim); font-weight: 600; }
 
-  /* ---------- BOARD STRIP ---------- */
-  section.board{ padding: 40px 0 8px; }
-  .board-label{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12px; color: var(--ink-mute);
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
-  }
-  .board-grid{
+  /* SUMMARY BAR */
+  .shift-summary {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 36px 0 54px;
   }
-  .board-card{
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    padding: 16px 14px;
-    position: relative;
+  .summary-box {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 20px 22px;
   }
-  .board-card .code{
-    font-family:'JetBrains Mono', monospace;
-    font-size: 22px; font-weight: 600;
-    letter-spacing: 0.02em;
+  .summary-box.before { border-left: 4px solid #64748B; }
+  .summary-box.after { border-left: 4px solid var(--neon-lime); }
+  .summary-box h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .board-card.pek .code{ color: var(--amber); }
-  .board-card.hgh .code{ color: var(--teal); }
-  .board-card.szx .code{ color: var(--coral); }
-  .board-card .city{
-    font-size: 13px; color: var(--ink-dim);
-    margin: 2px 0 10px;
+  .badge {
+    font-size: 10.5px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
   }
-  .board-card .line{
-    font-size: 13px; color: var(--ink); line-height: 1.55;
-  }
-  .board-card .status{
-    display:inline-block; margin-top: 10px;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.04em;
-    padding: 3px 8px; border-radius: 3px;
-  }
-  .board-card.pek .status{ background: var(--amber-bg); color: var(--amber); }
-  .board-card.hgh .status{ background: var(--teal-bg); color: var(--teal); }
-  .board-card.szx .status{ background: var(--coral-bg); color: var(--coral); }
+  .badge.before { background: rgba(100, 116, 139, 0.25); color: #CBD5E1; }
+  .badge.after { background: rgba(41, 241, 156, 0.15); color: var(--neon-lime); }
+  .summary-box p { margin: 0; font-size: 13.5px; color: var(--text-sub); }
 
-  /* ---------- INTRO ---------- */
-  section.intro{ padding: 36px 0 8px; }
-  section.intro p{ color: var(--ink-dim); font-size: 15.5px; }
-  section.intro p + p{ margin-top: 14px; }
-
-  /* ---------- SECTION HEADS ---------- */
-  h2.section-head{
-    font-family:'Space Grotesk', sans-serif;
-    font-size: 24px; font-weight: 700;
-    color: #fff;
-    margin: 56px 0 6px;
-    padding-top: 28px;
-    border-top: 1px solid var(--line);
+  /* SECTION HEAD */
+  .section-head {
+    margin: 50px 0 20px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 12px;
   }
-  .section-sub{
-    font-size: 13.5px; color: var(--ink-mute); margin-bottom: 22px;
+  h2.section-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 6px;
   }
+  .section-sub { font-size: 13px; color: var(--text-mute); }
 
-  /* airport card */
-  .airport-card{
-    border-left: 3px solid var(--line);
-    padding-left: 20px;
-    margin-bottom: 6px;
+  /* PHOTO COMPARISON ROW */
+  .photo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 40px;
   }
-  .airport-card.pek{ border-left-color: var(--amber); }
-  .airport-card.hgh{ border-left-color: var(--teal); }
-  .airport-card.szx{ border-left-color: var(--coral); }
+  .photo-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-top {
+    padding: 10px 14px;
+    font-size: 11.5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .photo-card.before .card-top { background: #182232; color: #94A3B8; border-bottom: 1px solid var(--card-border); }
+  .photo-card.after .card-top { background: rgba(41, 241, 156, 0.08); color: var(--neon-lime); border-bottom: 1px solid rgba(41, 241, 156, 0.2); }
 
-  .airport-card p{ font-size: 15.5px; color: var(--ink); margin: 0 0 14px; }
-  .airport-card p b{ color: #fff; font-weight: 600; }
-
-  figure.shot{
-    margin: 22px 0 26px;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 8px;
+  .card-media {
+    width: 100%;
+    height: 330px;
+    background: #000;
     overflow: hidden;
   }
-  figure.shot img{
-    display: block; width: 100%; height: auto;
-    background: var(--panel-2);
+  .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
   }
-  figure.shot figcaption{
-    padding: 12px 16px 14px;
-    font-size: 12.5px;
-    color: var(--ink-mute);
-    line-height: 1.5;
-    border-top: 1px solid var(--line);
-  }
-  figure.shot.wide img{ aspect-ratio: 1080/583; object-fit: cover; }
-  figure.shot.tall img{ aspect-ratio: 1080/1434; object-fit: cover; }
-  figure.shot.mid img{ aspect-ratio: 1080/810; object-fit: cover; }
+  .card-media img:hover { transform: scale(1.02); }
 
-  .fig-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .fig-row figure.shot{ margin: 22px 0 0; }
-
-  .tag{
-    display:inline-block;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11px; letter-spacing: 0.04em;
-    padding: 3px 8px; border-radius: 3px;
-    margin-right: 6px; margin-bottom: 12px;
+  .card-body {
+    padding: 16px 18px 18px;
+    font-size: 13.5px;
+    color: var(--text-sub);
+    line-height: 1.55;
+    border-top: 1px solid var(--card-border);
+    flex-grow: 1;
   }
-  .tag.pek{ background: var(--amber-bg); color: var(--amber); }
-  .tag.hgh{ background: var(--teal-bg); color: var(--teal); }
-  .tag.szx{ background: var(--coral-bg); color: var(--coral); }
+  .card-body b { color: #FFFFFF; font-weight: 600; }
 
-  /* ---------- WHY LIST ---------- */
-  .why-list{ list-style: none; margin: 0; padding: 0; }
-  .why-list li{
-    display: grid; grid-template-columns: 28px 1fr; gap: 14px;
-    padding: 16px 0;
-    border-top: 1px solid var(--line);
-    font-size: 15px; color: var(--ink);
-  }
-  .why-list li:first-child{ border-top: none; }
-  .why-list li .num{
-    font-family:'JetBrains Mono', monospace;
-    color: var(--ink-mute);
-    font-size: 13px; padding-top: 2px;
-  }
-  .why-list li b{ color: #fff; }
-
-  /* ---------- MONEY TABLE ---------- */
-  .money-table{
+  /* MATRIX TABLE */
+  table.matrix {
     width: 100%;
     border-collapse: collapse;
-    margin: 8px 0 6px;
-    font-size: 14px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0 60px;
+    font-size: 13.5px;
   }
-  .money-table th{
+  table.matrix th {
     text-align: left;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 11.5px; letter-spacing: 0.04em;
-    color: var(--ink-mute);
-    padding: 0 12px 10px 0;
-    border-bottom: 1px solid var(--line);
-    font-weight: 500;
+    padding: 13px 16px;
+    background: #172030;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-mute);
+    border-bottom: 1px solid var(--card-border);
   }
-  .money-table td{
-    padding: 14px 12px 14px 0;
-    border-bottom: 1px solid var(--line);
+  table.matrix td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--card-border);
     vertical-align: top;
-    color: var(--ink-dim);
+    color: var(--text-sub);
   }
-  .money-table td.who{ color: #fff; font-weight: 600; white-space: nowrap; }
-  .money-table td.amt{
-    font-family:'JetBrains Mono', monospace;
-    color: var(--amber);
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .flag{
-    display:inline-block;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 10.5px;
-    color: var(--ink-mute);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    padding: 1px 5px;
-    margin-left: 6px;
-  }
+  table.matrix tr:last-child td { border-bottom: none; }
+  table.matrix td.cat { color: #FFFFFF; font-weight: 600; font-family: 'JetBrains Mono', monospace; width: 18%; }
+  table.matrix td.after-col { color: #F1F5F9; background: rgba(41, 241, 156, 0.02); }
 
-  /* ---------- OUTLOOK ---------- */
-  .outlook-box{
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 22px 22px;
-    font-size: 15px;
-    color: var(--ink-dim);
-    margin-top: 8px;
-  }
-  .outlook-box p + p{ margin-top: 12px; }
-  .outlook-box b{ color: #fff; }
-
-  /* ---------- FOOTER ---------- */
-  footer{
-    margin-top: 64px;
-    border-top: 1px solid var(--line);
-    padding: 28px 0 60px;
-    font-size: 12.5px;
-    color: var(--ink-mute);
+  footer {
+    border-top: 1px solid var(--card-border);
+    padding: 36px 0 60px;
+    font-size: 12px;
+    color: var(--text-mute);
     line-height: 1.7;
   }
-  footer p{ margin: 0 0 8px; }
+  footer a { color: var(--neon-lime); text-decoration: none; }
 
-  @media (max-width: 640px){
-    h1.title{ font-size: 30px; }
-    .board-grid{ grid-template-columns: 1fr; }
-    .fig-row{ grid-template-columns: 1fr; }
-    .wrap{ padding: 0 18px; }
+  @media (max-width: 780px) {
+    .shift-summary, .photo-row { grid-template-columns: 1fr; }
+    h1.title { font-size: 28px; }
+    .card-media { height: 240px; }
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<header>
   <div class="wrap">
-    <div class="eyebrow"><span class="dot"></span>BRIEFING · 중국 클라우드 / AI 산업 동향</div>
-    <h1 class="title">공항 광고,<br><span class="accent">AI 쟁탈전</span>이 되다</h1>
-    <p class="subtitle">베이징 서우두·항저우 샤오산·선전 바오안 — 중국 빅테크들이 활주로 옆 광고판을 놓고 벌이는 오프라인 전쟁을 요약합니다.</p>
-    <div class="source-line">
-      원문: <b>「机场广告，AI乱斗」</b> · 智能涌现(36氪) · 邓咏仪 · 2025.07.23 발행<br>
-      이 문서는 원문 기사를 바탕으로 재구성한 요약본이며, 본문 인용은 최소화하고 대부분 의역·재정리했습니다.
-    </div>
+    <div class="tag">Knowledge Conference Reinvention</div>
+    <h1 class="title">ServiceNow Knowledge<br><span>헬프데스크 세미나에서 엔터프라이즈 AI 서밋으로</span></h1>
+    <p class="subtitle">
+      2022년까지의 ITIL 티켓팅·실무진 워크숍에서, 2025~2026년 NVIDIA와 함께 기업의 모든 AI 워크플로우를 관장하는 최고경영진 서밋으로 탈바꿈한 실제 현장 사진 비교.
+    </p>
   </div>
 </header>
 
-<section class="board">
-  <div class="wrap">
-    <div class="board-label">// 한눈에 보기 — 3개 공항 현황판</div>
-    <div class="board-grid">
-      <div class="board-card pek">
-        <div class="code">PEK</div>
-        <div class="city">베이징 서우두공항</div>
-        <div class="line">알리바바 클라우드가 공항 전체를 도배하자, 바이두 클라우드가 명품 브랜드 자리를 빼앗아 반격.</div>
-        <div class="status">격전지</div>
+<main class="wrap">
+
+  <!-- TIMELINE SUMMARY -->
+  <div class="shift-summary">
+    <div class="summary-box before">
+      <h3>~2022년: 실무진 &amp; 테크 세미나 <span class="badge before">BEFORE</span></h3>
+      <p>ITSM 관리자, 시스템 엔지니어들이 시그니처 형광 녹색 셔츠를 입고 핸즈온 랩, 계약 프로세스 개선, SLA 설정을 논의하던 실무 중심 현장.</p>
+    </div>
+    <div class="summary-box after">
+      <h3>2025~2026년: 엔터프라이즈 AI 서밋 <span class="badge after">AFTER</span></h3>
+      <p>C레벨 경영진 대상. Agentic AI, 자율 에이전트, AI 거버넌스를 앞세워 "모든 비즈니스의 AI 제어판" 지위를 선언한 글로벌 빅테크 쇼케이스.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 1: STAGE & PERSONA -->
+  <div class="section-head">
+    <h2 class="section-title">01. 메인 키노트 무대 연출 &amp; 발표자</h2>
+    <div class="section-sub">형광 셔츠 실무진의 세션 무대 → 거대 3D LED 무대 위의 글로벌 테크 키노트</div>
+  </div>
+
+  <div class="photo-row">
+    <!-- BEFORE 1: stage_2022.png -->
+    <div class="photo-card before">
+      <div class="card-top">
+        <span>BEFORE (2022)</span>
+        <span>THEATER 4 세션</span>
       </div>
-      <div class="board-card hgh">
-        <div class="code">HGH</div>
-        <div class="city">항저우 샤오산공항</div>
-        <div class="line">알리바바 안마당에서 바이트댄스의 화산엔진이 바로 옆자리에 광고를 붙여 정면 승부.</div>
-        <div class="status">맞불</div>
+      <div class="card-media">
+        <img src="stage_2022.png" alt="2022년 Knowledge 세션 무대">
       </div>
-      <div class="board-card szx">
-        <div class="code">SZX</div>
-        <div class="city">선전 바오안공항</div>
-        <div class="line">딥시크 열풍을 탄 AI 일체기 업체들이 QR코드 즉시할인 광고로 기업주를 정조준.</div>
-        <div class="status">붐</div>
+      <div class="card-body">
+        <b>형광 녹색 셔츠와 실무 프로세스 개선 (Theater 4)</b><br>
+        Aavenir 등 파트너사와 실무 엔지니어들이 상징적 형광 녹색 셔츠를 입고 무대에 올라 수천 건의 계약 관리, 승인 지연, 수작업 비효율을 줄이는 방안을 도표로 설명하는 실무형 세션 구조.
+      </div>
+    </div>
+
+    <!-- AFTER 1: stage_2025.jpg -->
+    <div class="photo-card after">
+      <div class="card-top">
+        <span>AFTER (2026)</span>
+        <span>K26 오프닝 키노트</span>
+      </div>
+      <div class="card-media">
+        <img src="stage_2025.jpg" alt="Knowledge 2026 K26 메인 키노트">
+      </div>
+      <div class="card-body">
+        <b>압도적인 입체 3D LED 무대와 C-Suite 기조연설 (K26)</b><br>
+        지엽적인 기능 설명 대신 'K26' 3D 메가 비주얼을 배경으로 서비스나우 CEO와 빅테크 리더들이 등장하여 기업 전체의 AI 전환을 선언하는 초대형 글로벌 테크 쇼케이스 연출.
       </div>
     </div>
   </div>
-</section>
 
-<section class="intro">
-  <div class="wrap">
-    <p>온라인 광고는 갈수록 비싸지고 자리 잡기도 어려워지는 반면, 오프라인 광고의 "가성비"는 오히려 부각되고 있다는 것이 원문의 출발점입니다. 그 신호가 가장 뚜렷하게 나타난 곳이 바로 1급 도시 공항입니다.</p>
-    <p>2025년 6월, 베이징 서우두공항의 출발·도착층 전체가 알리바바 클라우드의 "AI就用阿里云(AI는 알리바바 클라우드로)" 광고로 덮였습니다. 업계 관계자들은 이번 캠페인을 이번 대모형(LLM) 열풍 국면에서 가장 큰 규모의 광고 집행 중 하나로 평가합니다. 이 신호는 곧바로 경쟁사들의 반격과 다른 업체들의 참전으로 이어졌습니다.</p>
-  </div>
-</section>
-
-<div class="wrap">
-
-  <h2 class="section-head">서우두공항 — 알리바바 대 바이두</h2>
-  <div class="section-sub">베이징 · PEK · 출발/도착층 전면전</div>
-  <div class="airport-card pek">
-    <span class="tag pek">PEK</span>
-    <p>6월, 베이징 서우두공항을 자주 오가던 한 업계 관계자는 <b>출발층과 도착층을 가리지 않고 알리바바 클라우드 광고가 터미널 전체를 덮은 모습</b>을 목격했습니다. 서버 사업을 하는 동종 업계 사람의 눈에는 신호가 명확했습니다 — "알리바바 클라우드가 전쟁을 시작했다"는 것. 복수의 업계 관계자는 이 캠페인 규모를 <b>억 위안 단위</b>로 추정하며, 이번 AI 대모형 랠리 중 가장 큰 광고 집행으로 꼽습니다.</p>
-    <figure class="shot mid">
-      <img src="https://img.36krcdn.com/hsossms/20250723/v2_76c2224f1b0642eeaa5e76e6924491c6@2057308263_oswg96086oswg1080oswg810_img_000?x-oss-process=image/format,jpg/interlace,1" referrerpolicy="no-referrer" alt="서우두공항을 채운 알리바바 클라우드 AI 광고" loading="lazy">
-      <figcaption>서우두공항 출발/도착층을 채운 알리바바 클라우드의 "AI就用阿里云" 광고. 출처: 智能涌现, 2025년 7월 현장 촬영.</figcaption>
-    </figure>
-    <p>알리바바가 자리를 점령한 지 얼마 지나지 않아, <b>바이두 클라우드가 서우두 T3 도착층에서 가장 비싼 광고 자리 중 하나를 가져갔습니다.</b> 업계 관계자에 따르면 바이두 클라우드가 이 자리를 산 것은 처음이며, 이 광고판은 <b>연 최소 1000만 위안</b>대 가격으로 알려져 있습니다. 대모형 열풍 이전 이 자리의 이전 주인은 명품 브랜드 디올(Dior)이었습니다.</p>
-    <figure class="shot tall">
-      <img src="https://img.36krcdn.com/hsossms/20250723/v2_bd1d40fa1013483ca2a014610ee61c66@2057308263_oswg197524oswg1080oswg1575_img_000?x-oss-process=image/format,jpg/interlace,1" referrerpolicy="no-referrer" alt="서우두 T3 도착홀의 바이두 클라우드 광고" loading="lazy">
-      <figcaption>서우두공항 T3 도착 대기실, 과거 디올이 쓰던 자리를 차지한 바이두 클라우드 광고. 출처: 온라인 공개 자료.</figcaption>
-    </figure>
-    <p>7월 현재 서우두 T3 체크인홀은 <b>중국이동·차이나유니콤·알리바바 클라우드·바이두 클라우드·JD클라우드·레노버·제4범식(第四范式)·구장운극(九章云极)</b> 등의 AI 광고로 가득 찼습니다. 일체기, 대모형, 에이전트, 스마트 드라이빙까지 업종을 가리지 않고 몰려든 모습입니다.</p>
-    <figure class="shot tall">
-      <img src="https://img.36krcdn.com/hsossms/20250723/v2_3a2c65c1d1614f4c80ed76377b8fd898@2057308263_oswg2464598oswg1080oswg1434_img_000?x-oss-process=image/format,jpg/interlace,1" referrerpolicy="no-referrer" alt="여러 업체가 뒤섞인 공항 AI 광고" loading="lazy">
-      <figcaption>최근 베이징·선전 공항을 채운 각 업체 AI 광고. 출처: 智能涌现 7월 현장 촬영 및 온라인 자료 종합.</figcaption>
-    </figure>
+  <!-- SECTION 2: ARCHITECTURE SLIDES -->
+  <div class="section-head">
+    <h2 class="section-title">02. 플랫폼 아키텍처 슬라이드 변화</h2>
+    <div class="section-sub">백엔드 기능 모듈 나열형 구조 → "Any Industry, Any AI" 최상위 오케스트레이터 정의</div>
   </div>
 
-  <h2 class="section-head">샤오산공항 — 알리바바 안마당의 맞불</h2>
-  <div class="section-sub">항저우 · HGH · 바이트댄스 대 알리바바</div>
-  <div class="airport-card hgh">
-    <span class="tag hgh">HGH</span>
-    <p>바이트댄스 계열의 <b>화산엔진(火山引擎)</b>은 알리바바의 본거지인 항저우 샤오산공항에 자리를 잡으면서, 아예 <b>알리바바 클라우드 광고 바로 옆에 나란히</b> 자사 광고를 걸었습니다. 상대의 안마당에서 정면으로 맞불을 놓은 셈입니다.</p>
-    <figure class="shot wide">
-      <img src="https://img.36krcdn.com/hsossms/20250723/v2_7c5a32d5d24b419fac618017d51d16a5@2057308263_oswg89879oswg1080oswg494_img_000?x-oss-process=image/format,jpg/interlace,1" referrerpolicy="no-referrer" alt="항저우 샤오산공항의 화산엔진과 알리바바 클라우드 광고" loading="lazy">
-      <figcaption>항저우 샤오산공항, 알리바바 클라우드 광고 옆에 나란히 걸린 화산엔진(바이트댄스) 광고. 출처: 온라인 공개 자료.</figcaption>
-    </figure>
-    <p>항저우 샤오산공항은 최근 2년간 AI 대모형·클라우드로 대표되는 IT/인터넷 광고 비중이 가장 빠르게 늘어난 공항 중 하나입니다. <span class="mono">都市快报</span> 집계에 따르면 이 카테고리는 이미 <b>공항 광고 매출의 약 20%</b>를 차지해, 식음료 업종에 이어 2위 자리를 꿰찼습니다.</p>
+  <div class="photo-row">
+    <!-- BEFORE 2: bofore_2022_2.png -->
+    <div class="photo-card before">
+      <div class="card-top">
+        <span>BEFORE (2022)</span>
+        <span>디지털 비즈니스 플랫폼 다이어그램</span>
+      </div>
+      <div class="card-media">
+        <img src="bofore_2022_2.png" alt="2022년 플랫폼 아키텍처 슬라이드">
+      </div>
+      <div class="card-body">
+        <b>ITSM 기능 모듈 중심의 빽빽한 시스템 다이어그램</b><br>
+        CRM, ERP 등 하부 시스템을 연결하며 CMDB, 서비스 카탈로그, 프로세스 마이닝 등 내부 엔지니어링 용어와 컴포넌트 목록을 가득 채워 설명하던 과거 아키텍처 장표.
+      </div>
+    </div>
+
+    <!-- AFTER 2: after_2025.jpeg -->
+    <div class="photo-card after">
+      <div class="card-top">
+        <span>AFTER (2025)</span>
+        <span>ServiceNow AI Platform 계층도</span>
+      </div>
+      <div class="card-media">
+        <img src="after_2025.jpeg" alt="2025년 ServiceNow AI Platform 슬라이드">
+      </div>
+      <div class="card-body">
+        <b>"Any Industry, Any AI" 최상위 통합 OS 선언</b><br>
+        복잡한 모듈 이름을 걷어내고 <b>[Any Industry / AI · Data · Workflows / Any Cloud · System]</b>으로 단순화하여 모든 기업의 AI와 데이터를 지휘하는 단 하나의 엔터프라이즈 AI 두뇌로 재정의.
+      </div>
+    </div>
   </div>
 
-  <h2 class="section-head">선전 바오안공항 — 딥시크가 촉발한 일체기 붐</h2>
-  <div class="section-sub">선전 · SZX · 기업주를 정조준한 광고</div>
-  <div class="airport-card szx">
-    <span class="tag szx">SZX</span>
-    <p>2025년 초 <b>딥시크(DeepSeek)</b>가 갑자기 화제가 되자, 이를 탑재한 "일체기(一体机)" 판매 붐이 뒤따란습니다. 한 업체는 선전 바오안공항에 대형 딥시크 일체기 광고를 걸고, QR코드에 <b>"스캔하면 2000위안 즉시 할인"</b>이라는 문구를 붙여 기업 구매 담당자를 직접 겨냥했습니다.</p>
-    <figure class="shot mid">
-      <img src="https://img.36krcdn.com/hsossms/20250723/v2_0cd6dbb0c30c455ba58b9e47c3b6548e@2057308263_oswg190267oswg1080oswg758_img_000?x-oss-process=image/format,jpg/interlace,1" referrerpolicy="no-referrer" alt="선전 바오안공항의 딥시크 일체기 광고" loading="lazy">
-      <figcaption>선전 바오안공항의 DeepSeek 일체기 광고. QR코드를 스캔하면 2000위안 즉시 할인을 내세웠다. 출처: 온라인 공개 자료.</figcaption>
-    </figure>
+  <!-- SECTION 3: EXPO FLOOR -->
+  <div class="section-head">
+    <h2 class="section-title">03. 전시 엑스포 플로어(Expo Floor) 분위기</h2>
+    <div class="section-sub">파트너사 부스 중심의 전시장 → "ServiceNow AI Platform" 돔형 미래 체험관</div>
   </div>
 
-  <h2 class="section-head">왜 공항인가</h2>
-  <div class="section-sub">공항 광고판이 격전지가 된 이유</div>
-  <ul class="why-list">
-    <li><span class="num">01</span><span><b>구매 결정권자가 모이는 곳.</b> 전국 10대 공항이 전체 항공 여객의 80%를 차지하고, 그중 약 70%가 비즈니스 인사입니다. 대모형·AI 상품을 실제로 구매할 기업·정부 의사결정자를 온라인 광고보다 훨씬 정확하게 겨냥할 수 있습니다.</span></li>
-    <li><span class="num">02</span><span><b>온라인 광고의 상대적 매력이 줄었습니다.</b> 온라인 유입 채널은 이미 바이트댄스·텐센트 등 대형 플랫폼이 장악해 비용이 매년 오르는 반면, 공항 광고의 "가성비"는 오히려 부각되기 시작했습니다.</span></li>
-    <li><span class="num">03</span><span><b>기존 광고주가 빠지면서 자리가 열렸습니다.</b> 공항의 전통적 주요 광고주였던 명품 브랜드와 내연기관차 회사들이 예산을 줄이면서, 디올이 쓰던 자리가 바이두 클라우드에 넘어간 것처럼 최상급 자리가 새 주인을 찾고 있습니다.</span></li>
-    <li><span class="num">04</span><span><b>좋은 자리는 장기 계약, 도착층이 출발층보다 우위.</b> 보안검색대 부근, 도착홀 출구, 탑승 브릿지 같은 핵심 자리는 대개 대기업과 연 단위로 묶입니다. 업계 공통 인식으로는, 여유로운 심리 상태로 이동하는 <b>도착 구역이 서두르는 출발 구역보다 더 좋은 자리</b>로 평가받습니다.</span></li>
-    <li><span class="num">05</span><span><b>광고 자체가 경쟁사에 보내는 신호입니다.</b> 지푸(智谱)가 2024년 경쟁사 밀집 지역인 중관춘 인근 지하철·공항에 몇 달간 집중 광고를 걸었던 시점은 마침 대규모 투자 유치 시기와 겹쳤습니다. 자금 조달 국면에서 단기간 화력을 집중해 시장에 존재감을 과시하는 패턴이 반복되고 있습니다.</span></li>
-    <li><span class="num">06</span><span><b>다만 실질 매출 효과는 제한적이라는 평가도 있습니다.</b> 대형 클라우드·대모형 업체들의 광고 집행은 실제 매출 증가보다 "시장에 대한 태도 표명" 성격이 강하다는 시각이 업계 내부에 존재합니다.</span></li>
-  </ul>
+  <div class="photo-row">
+    <!-- BEFORE 3: floor_22.png -->
+    <div class="photo-card before">
+      <div class="card-top">
+        <span>BEFORE (2022)</span>
+        <span>전통 엑스포 전시장</span>
+      </div>
+      <div class="card-media">
+        <img src="floor_22.png" alt="2022년 전시장 부스">
+      </div>
+      <div class="card-body">
+        <b>원형 로고 사인과 기능별 부스 상담 중심 전시장</b><br>
+        파트너사와 벤더들이 각자 부스를 차리고 'Industry Solutions', 'Decision Faster' 등의 문구를 내걸어 1:1 상담과 데모를 진행하던 전통적인 B2B IT 엑스포 풍경.
+      </div>
+    </div>
 
-  <h2 class="section-head">대략적인 금액</h2>
-  <div class="section-sub">원문에 언급된 규모 (정확한 공개 수치는 아님)</div>
-  <table class="money-table">
+    <!-- AFTER 3: floor_25.jpg -->
+    <div class="photo-card after">
+      <div class="card-top">
+        <span>AFTER (2025)</span>
+        <span>ServiceNow AI Platform 파빌리온</span>
+      </div>
+      <div class="card-media">
+        <img src="floor_25.jpg" alt="2025년 ServiceNow AI Platform 초대형 전시장">
+      </div>
+      <div class="card-body">
+        <b>초대형 링 스크린과 "Govern Your AI" 미래 쇼룸</b><br>
+        중앙 돔형 서클 아래에 3D 크리스탈 오브제와 미래지향적 블루 조명을 배치하고, "Meet Your AI Agents", "Govern Your AI" 등 자율 에이전트를 직접 체험하는 프리미엄 테크 쇼룸으로 진화.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: KEYNOTE MESSAGING -->
+  <div class="section-head">
+    <h2 class="section-title">04. 오프닝 메시지 및 아젠다 세팅</h2>
+    <div class="section-sub">단순 참석 환영 인사 → "Are you ready for AI agents?" C-Level 화두 제시</div>
+  </div>
+
+  <div class="photo-row">
+    <!-- BEFORE 4: before_2022.png -->
+    <div class="photo-card before">
+      <div class="card-top">
+        <span>BEFORE (2022)</span>
+        <span>오프닝 웰컴 스크린</span>
+      </div>
+      <div class="card-media">
+        <img src="before_2022.png" alt="2022년 오프닝 웰컴 무대">
+      </div>
+      <div class="card-body">
+        <b>활기찬 커뮤니티 중심의 "Welcome Knowledge"</b><br>
+        실무자 커뮤니티와 젊은 참가자들의 스톡 이미지를 띄우며 친근함과 사용자 커뮤니티 결속을 강조하던 전형적인 고객 컨퍼런스 오프닝.
+      </div>
+    </div>
+
+    <!-- AFTER 4: after_2025_2.avif -->
+    <div class="photo-card after">
+      <div class="card-top">
+        <span>AFTER (2025)</span>
+        <span>AI Agents 아젠다 키노트</span>
+      </div>
+      <div class="card-media">
+        <img src="after_2025_2.avif" alt="2025년 AI agents 키노트">
+      </div>
+      <div class="card-body">
+        <b>직관적인 질문: "Are you ready for AI agents?"</b><br>
+        화려한 3D 오브제와 함께 경영진(CFO, CEO) 페르소나를 전면에 띄우고, "기업은 자율 AI 에이전트를 맞이할 준비가 되었는가, 서비스나우 플랫폼은 이미 준비되어 있다"는 도발적 아젠다 제시.
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAILED MATRIX -->
+  <div class="section-head">
+    <h2 class="section-title">05. 핵심 전환 지표 비교표</h2>
+  </div>
+
+  <table class="matrix">
     <thead>
-      <tr><th>주체 / 항목</th><th>규모</th><th>비고</th></tr>
+      <tr>
+        <th>구분</th>
+        <th>Before (~2022년)</th>
+        <th class="after-col">After (2025~2026년)</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="who">알리바바 클라우드<br><span style="color:var(--ink-mute); font-weight:400;">서우두공항 캠페인</span></td>
-        <td class="amt">억 위안대<span class="flag">확인필요</span></td>
-        <td>복수 업계 관계자 추산. 정확한 공개 집행액은 아니며, 이번 대모형 열풍 중 최대 규모 광고 집행 중 하나로 평가됨.</td>
+        <td class="cat">행사 성격</td>
+        <td>ITSM / ITOM 엔지니어링 실무 세미나</td>
+        <td class="after-col">글로벌 엔터프라이즈 AI 전략 서밋</td>
       </tr>
       <tr>
-        <td class="who">바이두 클라우드<br><span style="color:var(--ink-mute); font-weight:400;">T3 도착홀 광고판</span></td>
-        <td class="amt">연 1,000만 위안+</td>
-        <td>이전 소유주는 명품 브랜드 디올. "연 최소" 수준으로 언급됨.</td>
+        <td class="cat">참석자 층</td>
+        <td>시스템 관리자, 헬프데스크 실무자 (형광 셔츠 커뮤니티)</td>
+        <td class="after-col">CEO, CIO, CDO 등 C-Suite 의사결정권자</td>
       </tr>
       <tr>
-        <td class="who">알리바바그룹<br><span style="color:var(--ink-mute); font-weight:400;">AI·클라우드 3개년 투자 (2025.5 발표)</span></td>
-        <td class="amt">3,800억 위안</td>
-        <td>대부분 하드웨어 인프라·인재 투입에 배정되며, 광고 예산은 이 중 제한적인 비중으로 추정됨.</td>
+        <td class="cat">키노트 연사</td>
+        <td>내부 제품 매니저, 고객사 IT 엔지니어</td>
+        <td class="after-col">빌 맥더멋(CEO) &amp; 젠슨 황(NVIDIA CEO) 단독 대담</td>
       </tr>
       <tr>
-        <td class="who">항저우 샤오산공항<br><span style="color:var(--ink-mute); font-weight:400;">IT/인터넷 광고 비중</span></td>
-        <td class="amt">광고 매출의 약 20%</td>
-        <td>최근 2년 누적 기준. 식음료 업종에 이어 2위. (都市快报 집계)</td>
+        <td class="cat">핵심 키워드</td>
+        <td>ITIL v3, SLA 단축, 계약 관리, 티켓 자동 배정</td>
+        <td class="after-col">AI Agents, Now Assist, Agentic Business, AI Governance</td>
+      </tr>
+      <tr>
+        <td class="cat">무대 비주얼</td>
+        <td>다이어그램, 프로세스 플로우차트, UI 캡처</td>
+        <td class="after-col">초대형 3D 타이포그래피, 상징적 슬로건, 돔형 체험관</td>
       </tr>
     </tbody>
   </table>
 
-  <h2 class="section-head">전망</h2>
-  <div class="section-sub">과열된 광고, 그러나 아직은 대형업체 중심</div>
-  <div class="outlook-box">
-    <p>이 정도로 시끄러운데도, 원문은 <b>공항 광고가 곧 실제 매출 증가로 이어진다고 단정하지는 않습니다.</b> 대모형·클라우드 업체들의 집행은 대부분 기존 사업(클라우드, 통신, 하드웨어) 예산의 재배분이며, 신생 AI 응용 서비스 업체들의 예산이 눈에 띄게 늘어난 조짐은 아직 뚜렷하지 않다고 지적합니다.</p>
-    <p>업계 관계자는 이미 수익을 내는 상위권 AI 응용 업체조차 공항 광고를 "아직은 사치"로 여기고 있으며, <b>AI 응용 기업들이 스스로의 상업적 가치를 증명하기까지 약 2년 정도가 더 필요할 것</b>으로 내다봅니다. 그 사이 자금 여력이 부족한 중소업체들은 항만·지하철 등 상대적으로 저렴한 다른 오프라인 채널로 눈을 돌리는 흐름도 함께 나타나고 있습니다.</p>
-  </div>
-
-</div>
+</main>
 
 <footer>
   <div class="wrap">
-    <p><b>원문:</b> 「机场广告，AI乱斗」· 智能涌现(36氪 계열 매체) · 邓咏仪(기자) / 苏建勋(편집) · 2025.07.23 발행</p>
-    <p><b>원문 링크:</b> <a href="https://eu.36kr.com/zh/p/3391134008904071" target="_blank" rel="noopener">eu.36kr.com/zh/p/3391134008904071</a></p>
-    <p>본문의 인용은 최소화했으며, 대부분 원문 취지를 의역·재정리한 요약입니다. 각 이미지는 원문 기사에 실린 사진으로, 저자 현장 촬영분과 온라인 공개 자료가 섞여 있습니다(캡션에 출처 표기). 인용된 금액·수치 중 원문에서도 추정치로만 언급된 항목은 표에 "확인필요"로 표시했습니다.</p>
+    <p><b>자료 출처 및 참고 아카이브:</b></p>
+    <p>• Before: <a href="https://aavenir.com/glossary/servicenow-knowledge/" target="_blank" rel="noopener">Aavenir Glossary - ServiceNow Knowledge</a> 및 2022년 Knowledge 세션 아카이브</p>
+    <p>• After: ServiceNow Knowledge 2025~2026 공식 키노트 쇼케이스 및 라스베가스 현장 프레젠테이션</p>
   </div>
 </footer>
 
